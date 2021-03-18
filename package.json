@@ -2,10 +2,24 @@
   "name": "mytube",
   "version": "1.0.0",
   "description": "Mytube with Vanilla and NodeJS",
-  "main": "index.js",
   "author": "Lee SeJin",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.9.1",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "morgan": "^1.10.0"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js --delay 2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "nodemon": "^2.0.7"
   }
 }

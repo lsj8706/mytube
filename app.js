@@ -19,6 +19,7 @@ app.use(helmet());
 app.set('view engine',"pug");
 app.use("/uploads", express.static("uploads"));
 //위 코드는 uploads로 가면 uploads라는 디렉토리안으로 들어간다는 의미
+app.use("/static", express.static("static"));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));

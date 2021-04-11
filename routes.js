@@ -27,6 +27,11 @@ const DELETE_VIDEO = "/:id/delete";
 const GITHUB = "/auth/github";
 const GITHUB_CALLBACK = "/auth/github/callback";
 
+// Kakatalk
+
+const KAKAOTALK = "/auth/kakaotalk";
+const KAKAOTALK_CALLBACK = "/auth/kakaotalk/callback";
+
 const routes = {
     home: HOME,
     join: JOIN,
@@ -68,6 +73,8 @@ const routes = {
     },
     github: GITHUB,
     githubCallback: GITHUB_CALLBACK,
-    me: ME
+    me: ME,
+    kakaotalk: KAKAOTALK,
+    kakaotalkCallback: KAKAOTALK_CALLBACK
 };
 export default routes;

@@ -32,6 +32,13 @@ const GITHUB_CALLBACK = "/auth/github/callback";
 const KAKAOTALK = "/auth/kakaotalk";
 const KAKAOTALK_CALLBACK = "/auth/kakaotalk/callback";
 
+// API
+
+const API = "/api";
+const REGISTER_VIEW = "/:id/view";
+const ADD_COMMENT = "/:id/comment";
+const DELETE_COMMENT = "/:id/comment-delete";
+
 const routes = {
     home: HOME,
     join: JOIN,
@@ -75,6 +82,10 @@ const routes = {
     githubCallback: GITHUB_CALLBACK,
     me: ME,
     kakaotalk: KAKAOTALK,
-    kakaotalkCallback: KAKAOTALK_CALLBACK
+    kakaotalkCallback: KAKAOTALK_CALLBACK,
+    api: API,
+    registerView : REGISTER_VIEW,
+    addComment: ADD_COMMENT,
+    deleteComment: DELETE_COMMENT
 };
 export default routes;

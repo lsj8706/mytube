@@ -54,7 +54,8 @@ const config = {
       filename: '[name].css'
     }),
   ],
-  devtool:"source-map"
+  devtool:"source-map",
+  node:"empty"
 };
 
 module.exports = config;

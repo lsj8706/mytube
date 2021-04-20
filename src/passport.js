@@ -12,8 +12,8 @@ passport.use(new GithubStrategy(
     clientID: process.env.GH_ID,
     clientSecret: process.env.GH_SECRET,
     redirect_uri: process.env.PRODUCTION? 
-        `https://fast-stream-83740.herokuapp.com/${routes.githubCallback}`
-        :`http://localhost:4000/${routes.githubCallback}`
+        `https://fast-stream-83740.herokuapp.com${routes.githubCallback}`
+        :`http://localhost:4000${routes.githubCallback}`
     }, 
     githubLoginCallback
     )
@@ -23,7 +23,9 @@ passport.use(new KakaoStrategy(
     {
         clientID : process.env.KAKAO_ID,
         clientSecret: process.env.KAKAO_SECRET,
-        callbackURL : `http://localhost:4000/${routes.kakaotalkCallback}`
+        callbackURL : process.env.PRODUCTION? 
+            `https://fast-stream-83740.herokuapp.com${routes.kakaotalkCallback}`
+            : `http://localhost:4000${routes.kakaotalkCallback}`
     },
     kakaotalkLoginCallback
     )

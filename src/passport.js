@@ -11,7 +11,9 @@ passport.use(new GithubStrategy(
     {
     clientID: process.env.GH_ID,
     clientSecret: process.env.GH_SECRET,
-    redirect_uri: `http://localhost:4000/${routes.githubCallback}`
+    redirect_uri: process.env.PRODUCTION? 
+        `https://fast-stream-83740.herokuapp.com/${routes.githubCallback}`
+        :`http://localhost:4000/${routes.githubCallback}`
     }, 
     githubLoginCallback
     )
